@@ -16,19 +16,15 @@ Creative Commons Attribution 4.0 License (International): https://creativecommon
 </td>
 </tr></table>
 
-> **Welcome to preview!** This repository is for the "VS Code Remote Development" and "VS Code Remote - *" extensions that are currently in preview. If you are looking for the Visual Studio Code OSS project, see the [VS Code](https://github.com/Microsoft/vscode) repository.
+This repository is for providing feedback on the **[Visual Studio Remote Development](https://aka.ms/vscode-remote/download/extension)** extension pack and its related extensions. You can use the repository to report issues or submit feature requests on any of these extensions:
 
-[![Twitter](docs/images/Twitter_Social_Icon_24x24.png)](https://aka.ms/vscode-remote/twitter) [![Stack Overflow](docs/images/so-image-24x24.png)](https://stackoverflow.com/questions/tagged/vscode) [![VS Code Dev Community Slack](docs/images/Slack_Mark-24x24.png)](https://aka.ms/vscode-dev-community) [![VS Code Gitter](docs/images/gitter-icon-24x24.png)](https://gitter.im/Microsoft/vscode)
+- **[Remote - SSH](https://aka.ms/vscode-remote/download/ssh)**
+    - Remote - SSH: Explorer
+    - Remote - SSH: Editing Configuration Files
+- **[Remote - Containers](https://aka.ms/vscode-remote/download/containers)**
+- **[Remote - WSL](https://aka.ms/vscode-remote/download/wsl)**
 
-This repository is for reporting issues and feature requests related to the **[Visual Studio Remote Development extension pack](https://aka.ms/vscode-remote/download/extension)** and its related extension. You can use the repository to provide feedback on any of the following extensions:
-
-- **[Remote - SSH](https://aka.ms/vscode-remote/ssh/getting-started)** - Work with source code in any location by opening folders on a remote machine/VM using SSH.
-    - **Remote - SSH: Explorer** - Provides an explorer panel for connecting and managing SSH hosts.
-    - **Remote - SSH: Editing Configuration Files** - Provides language support for working with [SSH config files](https://www.ssh.com/ssh/config/).
-- **[Remote - Containers](https://aka.ms/vscode-remote/containers/getting-started)** - Work with a sandboxed toolchain or container based application by opening any folder inside (or mounted into) a container.
-- **[Remote - WSL](https://aka.ms/vscode-remote/wsl/getting-started)** - Get a Linux-powered development experience from the comfort of Windows by opening any folder in the Windows Subsystem for Linux.
-
-If you are encountering an issue with another extension when running in a remote environment, please raise an issue in the extension's repository. You can reference the [summary](https://aka.ms/vscode-remote/troubleshooting/extensions) of common extension issues and our [extension guide](https://aka.ms/vscode-remote/developing-extensions) to help the extension author get started. You can also report issues related to dev container definitions in the [vscode-dev-containers repository](https://aka.ms/vscode-dev-containers).
+If you are running into an issue with another extension, please raise an issue in the extension's repository. You can reference our [summary](https://aka.ms/vscode-remote/troubleshooting/extensions) of tips for remote related issues and our [extension guide](https://aka.ms/vscode-remote/developing-extensions) to help the extension author get started. Issues related to dev container definitions can also be reported in the [vscode-dev-containers repository](https://aka.ms/vscode-dev-containers).
 
 ## Documentation
 
@@ -45,10 +41,10 @@ Running into trouble? Wondering what you can do? These articles can help.
 You can use this repository to:
 
 - [Up-vote a feature or request a new one](https://aka.ms/vscode-remote/feature-requests).
-- Search [existing issues](https://aka.ms/vscode-remote/issues).
-- [Report a problem](https://aka.ms/vscode-remote/issues/new).
+- Search for [existing issues](https://aka.ms/vscode-remote/issues) already reported for potential workarounds.
+- [Report a problem](https://aka.ms/vscode-remote/issues/new) if you don't find what you are looking for.
 
-If you have a question, connect with us and the community using any of these social platforms:
+If you have a question, connect with the community using any of these social platforms:
 
 [![Twitter](docs/images/Twitter_Social_Icon_24x24.png)](https://aka.ms/vscode-remote/twitter) [![Stack Overflow](docs/images/so-image-24x24.png)](https://stackoverflow.com/questions/tagged/vscode) [![VS Code Dev Community Slack](docs/images/Slack_Mark-24x24.png)](https://aka.ms/vscode-dev-community) [![VS Code Gitter](docs/images/gitter-icon-24x24.png)](https://gitter.im/Microsoft/vscode)
 
