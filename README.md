@@ -7,12 +7,13 @@ Creative Commons Attribution 4.0 License (International): https://creativecommon
 
 # Visual Studio Code Remote Development
 
+❗️**Note**: These Remote Development extensions require **[Visual Studio Code Insiders](https://code.visualstudio.com/insiders)** and will not install in stable.
 <table style="width: 100%; border-style: none;"><tr>
 <td style="width: 140px; text-align: center;"><a href="https://aka.ms/vscode-remote/download/extension"><img width="128px" src="docs/images/remote-extensionpack.png" alt="Visual Studio Code logo"/></a></td>
 <td>
 <strong>Visual Studio Code Remote Development</strong><br />
 <i>Open any folder in a container, on a remote machine, or in WSL and take advantage of VS Code's full feature set. <strong><a href="https://aka.ms/vscode-remote">Learn more!</a></strong><br />
-<strong><a href="https://aka.ms/vscode-remote/download/extension"><img src="docs/images/download.png" alt="Download now!"/></a></strong></i>
+<strong><a href="https://aka.ms/vscode-remote/download/extension"><img src="docs/images/download.png" alt="Download now!"/></a></strong></i><br>
 </td>
 </tr></table>
 
