@@ -19,12 +19,11 @@ Creative Commons Attribution 4.0 License (International): https://creativecommon
 This repository is for providing feedback on the **[Visual Studio Remote Development](https://aka.ms/vscode-remote/download/extension)** extension pack and its related extensions. You can use the repository to report issues or submit feature requests on any of these extensions:
 
 - **[Remote - SSH](https://aka.ms/vscode-remote/download/ssh)**
-    - Remote - SSH: Explorer
     - Remote - SSH: Editing Configuration Files
 - **[Remote - Containers](https://aka.ms/vscode-remote/download/containers)**
 - **[Remote - WSL](https://aka.ms/vscode-remote/download/wsl)**
 
-If you are running into an issue with another extension, please raise an issue in the extension's repository. You can reference our [summary](https://aka.ms/vscode-remote/troubleshooting/extensions) of tips for remote related issues and our [extension guide](https://aka.ms/vscode-remote/developing-extensions) to help the extension author get started. Issues related to dev container definitions can also be reported in the [vscode-dev-containers repository](https://aka.ms/vscode-dev-containers).
+If you are running into an issue with **another extension** you'd like to use with the Remote Development extensions, please raise an issue in the extension's repository. You can reference our [summary](https://aka.ms/vscode-remote/troubleshooting/extensions) of tips for remote related issues and our [extension guide](https://aka.ms/vscode-remote/developing-extensions) to help the extension author get started. Issues related to dev container definitions can also be reported in the [vscode-dev-containers repository](https://aka.ms/vscode-dev-containers).
 
 ## Documentation
 
@@ -35,6 +34,12 @@ Running into trouble? Wondering what you can do? These articles can help.
 - [Developing inside a Container](https://aka.ms/vscode-remote/containers)
 - [Developing in WSL](https://aka.ms/vscode-remote/wsl)
 - [Tips, Tricks, and Troubleshooting](https://aka.ms/vscode-remote/troubleshooting)
+
+## Releases
+
+VS Code Remote Development extension "stable" releases are tied directly to VS Code releases. Release highlights can be found in [VS Code release notes](https://code.visualstudio.com/updates/v1_43) which will include a link to [detailed extension release notes](https://github.com/microsoft/vscode-docs/tree/master/remote-release-notes). 
+
+Development of the extensions follows the same [development process and schedule](https://github.com/microsoft/vscode/wiki/Development-Process#inside-an-iteration) as VS Code itself. You can see what is planned for the current development iteration in the pinned planning [issue in this repository](https://github.com/microsoft/vscode-remote-release/issues) along with a link to the broader VS Code plan. As with VS Code itslef, the extensions will update during a development iteration with changes that are only available in [VS Code Insiders Edition](https://code.visualstudio.com/insiders/).
 
 ## Providing Feedback
 
