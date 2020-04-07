@@ -39,7 +39,7 @@ Running into trouble? Wondering what you can do? These articles can help.
 
 VS Code Remote Development extension "stable" releases are tied directly to VS Code releases. Release highlights can be found in [VS Code release notes](https://code.visualstudio.com/updates/v1_43) which will include a link to [detailed extension release notes](https://github.com/microsoft/vscode-docs/tree/master/remote-release-notes). 
 
-The extensions are developed using the same [development process and schedule](https://github.com/microsoft/vscode/wiki/Development-Process#inside-an-iteration) as VS Code itself. You can see what is planned for the current development iteration in a pinned [planning issue in this repository](https://github.com/microsoft/vscode-remote-release/issues). This issue will include a link to the broader VS Code plan. As with VS Code itslef, the extensions will update during a development iteration with changes that are only available in [VS Code Insiders Edition](https://code.visualstudio.com/insiders/).
+The extensions are developed using the same [development process and schedule](https://github.com/microsoft/vscode/wiki/Development-Process#inside-an-iteration) as VS Code itself. You can see what is planned for the current development iteration in a pinned [planning issue in this repository](https://github.com/microsoft/vscode-remote-release/issues). This issue will include a link to the broader VS Code plan. As with VS Code itself, the extensions will update during a development iteration with changes that are only available in [VS Code Insiders Edition](https://code.visualstudio.com/insiders/).
 
 ## Providing Feedback
 
