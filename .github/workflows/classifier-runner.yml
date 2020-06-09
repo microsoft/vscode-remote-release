@@ -23,7 +23,7 @@ jobs:
       - name: "Run Classifier: Scraper"
         uses: ./actions/classifier/apply/fetch-issues
         with:
-          from: 3000
+          from: 130
           until: 5
           blobContainerName: vscode-remote-release-models
           blobStorageKey: ${{secrets.AZURE_BLOB_STORAGE_CONNECTION_STRING}}
@@ -41,4 +41,3 @@ jobs:
         uses: ./actions/classifier/apply/apply-labels
         with:
           config-path: classifier
-          # token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
