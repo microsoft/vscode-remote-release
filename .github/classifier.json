@@ -1,0 +1,15 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vscode-github-triage-actions/master/classifier/apply/apply-labels/classifier-config.schema.json",
+  "assignees": {},
+  "labels": {
+    "wsl": {
+      "applyLabel": true
+    },
+    "containers": {
+      "applyLabel": true
+    },
+    "ssh": {
+      "applyLabel": true
+    }
+  }
+}
