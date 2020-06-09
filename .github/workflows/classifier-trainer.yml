@@ -2,6 +2,8 @@ name: "Classifier: Trainer"
 on:
   schedule:
     - cron: 0 0 5 * *
+  repository_dispatch:
+    types: [trigger_classifier_trainer]
 
 jobs:
   main:

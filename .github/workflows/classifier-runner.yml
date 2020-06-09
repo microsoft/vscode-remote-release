@@ -2,6 +2,8 @@ name: "Classifier: Runner"
 on:
   schedule:
     - cron: 0 * * * *
+  repository_dispatch:
+    types: [trigger_classifier_runner]
 
 jobs:
   main:
@@ -21,7 +23,7 @@ jobs:
       - name: "Run Classifier: Scraper"
         uses: ./actions/classifier/apply/fetch-issues
         with:
-          from: 70
+          from: 3000
           until: 5
           blobContainerName: vscode-remote-release-models
           blobStorageKey: ${{secrets.AZURE_BLOB_STORAGE_CONNECTION_STRING}}
@@ -39,4 +41,4 @@ jobs:
         uses: ./actions/classifier/apply/apply-labels
         with:
           config-path: classifier
-          token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
+          # token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
