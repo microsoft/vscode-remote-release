@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: 'microsoft/vscode-github-triage-actions'
-          ref: v1
+          ref: v25
       - name: Install Actions
         if: contains(github.event.issue.labels.*.name, 'testplan-item') || contains(github.event.issue.labels.*.name, 'invalid-testplan-item')
         run: npm install --production
