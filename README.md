@@ -44,7 +44,6 @@ The extensions are developed using the same [development process and schedule](h
 ## Providing Feedback
 
 You can use this repository to:
-- [Talk to us directly!](https://outlook.office365.com/owa/calendar/VSCodeRemote@microsoft.onmicrosoft.com/bookings/s/qX09ky0ICEuBGFOByCJEqA2) Use this link to book time with a member of the product team to tell us more about your remote setup and experience so far.  
 - [Up-vote a feature or request a new one](https://aka.ms/vscode-remote/feature-requests).
 - Search for [existing issues](https://aka.ms/vscode-remote/issues) already reported for potential workarounds.
 - [Report a problem](https://aka.ms/vscode-remote/issues/new) if you don't find what you are looking for.
