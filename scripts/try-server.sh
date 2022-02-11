@@ -15,12 +15,12 @@ fi
 if [ -f /etc/alpine-release ]; then
     case $(uname -m) in
         x86_64)
-            INSTALL="server-linux-x64-alpine";;
+            INSTALL="server-linux-alpine-web";;
         aarch64)
             INSTALL="server-alpine-arm64-web";;
         *)
             echo "Unknown platform $(uname -m). Falling back to x86_64" 1>&2
-            INSTALL="server-linux-x64-alpine";;
+            INSTALL="server-linux-alpine-web";;
     esac
     if ! apk info | grep -qxe 'libstdc++'; then
         echo "libstdc++ is required to run the VS Code Server:"  1>&2
@@ -41,9 +41,9 @@ fi
 
 BUILD_INFO=`wget -qO- https://update.code.visualstudio.com/api/update/$INSTALL/insider/latest`
 
-DOWNLOAD_URL=$(echo $BUILD_INFO | sed -e 's/.*"url"\:\"\([^\"]\+\)\".*/\1/m')
-NAME=$(echo $BUILD_INFO | sed -e 's/.*"name"\:\"\([^\"]\+\)\".*/\1/m')
-COMMIT=$(echo $BUILD_INFO | sed -e 's/.*"version"\:\"\([^\"]\+\)\".*/\1/m')
+DOWNLOAD_URL=$(echo $BUILD_INFO | sed -e 's/.*"url"\:\"\([^\"]\+\)\".*/\1/')
+NAME=$(echo $BUILD_INFO | sed -e 's/.*"name"\:\"\([^\"]\+\)\".*/\1/')
+COMMIT=$(echo $BUILD_INFO | sed -e 's/.*"version"\:\"\([^\"]\+\)\".*/\1/')
 
 SERVER_DATA_DIR="$HOME/.vscode-server-insiders"
 SERVER_BUILDS_DIR="$SERVER_DATA_DIR/bin-web"
