@@ -27,7 +27,7 @@ if [ -f /etc/alpine-release ]; then
         echo "Please open an Alpine shell and run 'apk update && apk add libstdc++'" 1>&2
         exit 12
     fi
-elif [ "$(expr \"$OSTYPE\" : \"darwin.*\")" ]; then
+elif [ "$(expr \"$OSTYPE\" : \"darwin.*\")" != 0 ]; then
     INSTALL="server-darwin-web"
 else
     case $(uname -m) in
