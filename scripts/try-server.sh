@@ -5,10 +5,10 @@
 
 [ "$VSCODE_TRACE" = true ] && set -x
 
-if [ ! "$(command -v wget)" ]; then
-    echo "ERROR: Failed to download the VS Code server. 'wget' not installed." 1>&2
-    echo "Please install wget:" 1>&2
-    echo "Debian/Ubuntu: sudo apt-get install wget" 1>&2
+if [ ! "$(command -v curl)" ]; then
+    echo "ERROR: Failed to download the VS Code server. 'curl' not installed." 1>&2
+    echo "Please install curl:" 1>&2
+    echo "Debian/Ubuntu: sudo apt-get install curl" 1>&2
     exit 14
 fi
 
@@ -27,6 +27,8 @@ if [ -f /etc/alpine-release ]; then
         echo "Please open an Alpine shell and run 'apk update && apk add libstdc++'" 1>&2
         exit 12
     fi
+elif [ $(expr "$OSTYPE" : "darwin.*") ]; then
+    INSTALL="server-darwin-web"
 else
     case $(uname -m) in
         x86_64)
@@ -39,11 +41,11 @@ else
     esac
 fi
 
-BUILD_INFO=`wget -qO- https://update.code.visualstudio.com/api/update/$INSTALL/insider/latest`
+BUILD_INFO=`curl -s https://update.code.visualstudio.com/api/update/$INSTALL/insider/latest`
 
-DOWNLOAD_URL=$(echo $BUILD_INFO | sed -e 's/.*"url"\:\"\([^\"]\+\)\".*/\1/')
-NAME=$(echo $BUILD_INFO | sed -e 's/.*"name"\:\"\([^\"]\+\)\".*/\1/')
-COMMIT=$(echo $BUILD_INFO | sed -e 's/.*"version"\:\"\([^\"]\+\)\".*/\1/')
+DOWNLOAD_URL=$(echo $BUILD_INFO | sed -e 's/.*"url"\:\"\([^\"]*\)\".*/\1/')
+NAME=$(echo $BUILD_INFO | sed -e 's/.*"name"\:\"\([^\"]*\)\".*/\1/')
+COMMIT=$(echo $BUILD_INFO | sed -e 's/.*"version"\:\"\([^\"]*\)\".*/\1/')
 
 SERVER_DATA_DIR="$HOME/.vscode-server-insiders"
 SERVER_BUILDS_DIR="$SERVER_DATA_DIR/bin-web"
@@ -66,7 +68,7 @@ if [ ! -d "$SERVER_BUILD_DIR" ]; then
 
   # Download the .tar.gz file
   SERVER_TAR_FILE="$SERVER_BUILD_DIR-$(date +%s).tar.gz"
-  wget -O "$SERVER_TAR_FILE" "$DOWNLOAD_URL"
+  curl -s -o "$SERVER_TAR_FILE" "$DOWNLOAD_URL"
   if [ $? -eq 5 ]; then
     echo "Please install missing certificates." 1>&2
     echo "Debian/Ubuntu:  sudo apt-get install ca-certificates" 1>&2
