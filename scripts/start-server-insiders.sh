@@ -94,4 +94,4 @@ else
   CONNECTION_TOKEN=$(cat $CONNECTION_TOKEN_FILE)
 fi
 
-$SERVER_BUILD_DIR/bin/code-server-insiders --connection-token-file=$CONNECTION_TOKEN_FILE --port=7777 "$@"
+$SERVER_BUILD_DIR/bin/code-server-insiders --connection-token-file=$CONNECTION_TOKEN_FILE "$@"
