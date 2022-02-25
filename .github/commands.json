@@ -119,7 +119,7 @@
   {
     "type": "label",
     "name": "author-verification-requested",
-    "comment": "This bug has been fixed in the latest release!\n\n@${author}, you can help us out by commenting `/verified` if things are now working as expected.\n\nHappy Coding!"
+    "comment": "This bug has been fixed in the latest pre-release!\n\n@${author}, you can help us out by commenting `/verified` if things are now working as expected.\n\nHappy Coding!"
   },
   {
 		"type": "comment",
