@@ -3,14 +3,14 @@
 #
 $Install = "server-win32-x64-web"
 
-$Url = "https://update.code.visualstudio.com/api/update/$Install/insider/latest"
+$Url = "https://update.code.visualstudio.com/api/update/$Install/stable/latest"
 $BuildInfo = (Invoke-WebRequest -Uri $Url -UseBasicParsing).Content | ConvertFrom-Json
 
 $DownloadURL=$BuildInfo.url
 $Name=$BuildInfo.name
 $Commit=$BuildInfo.version
 
-$ServerDataDir="$home\.vscode-server-insiders"
+$ServerDataDir="$home\.vscode-server"
 $ServerBuildsDir="$ServerDataDir\bin-web"
 $ServerBuildDir="$ServerBuildsDir\$Commit"
 
@@ -47,4 +47,4 @@ if (!(Test-Path -Path "$ServerBuildDir")){
     Remove-Item -Path "$ServerZipFile"
 }
 
-Invoke-Expression -Command "$ServerBuildDir\bin\code-server-insiders.cmd $args" 
+Invoke-Expression -Command "$ServerBuildDir\bin\code-server.cmd $args" 
