@@ -10,7 +10,7 @@ about: Create a report to help us improve
 - VSCode Version:
 - Local OS Version:
 - Remote OS Version:
-- Remote Extension/Connection Type: SSH/Docker/WSL
+- Remote Extension/Connection Type: SSH/Containers/WSL
 - Logs:
 
 Steps to Reproduce:
