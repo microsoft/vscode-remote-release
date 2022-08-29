@@ -4,6 +4,7 @@ on:
     - cron: 0 0 5 * *
   repository_dispatch:
     types: [trigger_classifier_trainer]
+  workflow_dispatch:
 
 jobs:
   main:
@@ -22,8 +23,8 @@ jobs:
       - name: "Run Classifier: Scraper"
         uses: ./actions/classifier/train/fetch-issues
         with:
-          areas: wsl|containers|ssh
-          assignees: aeschli|roblourens|chrmarti
+          areas: wsl|containers|ssh|code-server
+          assignees: aeschli|roblourens|chrmarti|connor4312
       - name: Set up Python 3.7
         uses: actions/setup-python@v1
         with:
