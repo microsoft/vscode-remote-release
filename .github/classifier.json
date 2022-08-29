@@ -10,6 +10,9 @@
     },
     "ssh": {
       "applyLabel": true
+    },
+    "code-server": {
+      "applyLabel": true
     }
   }
 }
