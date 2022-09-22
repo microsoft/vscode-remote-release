@@ -1,0 +1,17 @@
+# Documentation: https://github.com/redhat-plumbers-in-action/advanced-issue-labeler#readme
+---
+
+policy:
+  - template: ['bug_report.yml', 'feature_request.yml', 'question.yml']
+    section:
+      - id: ['remote-con-type']
+        block-list: ['other']
+        label:
+          - name: 'wsl'
+            keys: ['WSL']
+          - name: 'containers'
+            keys: ['Containers']
+          - name: 'ssh'
+            keys: ['SSH']
+          - name: 'code-server'
+            keys: ['Server']
