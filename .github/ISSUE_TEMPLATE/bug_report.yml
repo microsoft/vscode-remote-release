@@ -1,0 +1,96 @@
+---
+
+name: Bug report
+labels: ["bug"]
+description: Create a report to help us improve
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search existing issues to avoid creating duplicates, and review our troubleshooting tips: https://code.visualstudio.com/docs/remote/troubleshooting
+
+        Please attach logs to help us diagnose your issue. Learn more here: https://code.visualstudio.com/docs/remote/troubleshooting#_reporting-issues and here: https://code.visualstudio.com/docs/remote/vscode-server#_where-can-i-provide-feedback-or-report-an-issue
+        
+        Also please test using the latest insiders build to make sure your issue has not already been fixed: https://code.visualstudio.com/insiders/
+
+        If your issue only appears in Codespaces, please visit: https://github.com/github/feedback/discussions/categories/codespaces-feedback
+
+  - type: input
+    id: vscode-version
+    attributes:
+      label: VSCode Version
+    validations:
+      required: false
+
+  - type: input
+    id: local-os-version
+    attributes:
+      label: Local OS Version
+    validations:
+      required: false
+
+  - type: input
+    id: remote-os-version
+    attributes:
+      label: Remote OS Version
+    validations:
+      required: false
+
+  - type: dropdown
+    id: remote-con-type
+    attributes:
+      label: Remote Extension/Connection Type
+      multiple: true
+      options:
+        - 'SSH'
+        - 'Containers'
+        - 'WSL'
+        - 'Server'
+        - 'other'
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      placeholder: This will be automatically formatted into code, so no need for backticks.
+      render: sh
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: local-issue
+    attributes:
+      label: Does this issue occur when you try this locally?
+      description: |
+        Check to see if the problem is general, with a specific extension, or only happens when remote.
+      multiple: false
+      options:
+        - 'Yes'
+        - 'No'
+    validations:
+      required: false
+
+  - type: dropdown
+    id: remote-issue
+    attributes:
+      label: Does this issue occur when you try this locally and all extensions are disabled?
+      multiple: false
+      options:
+        - 'Yes'
+        - 'No'
+    validations:
+      required: false

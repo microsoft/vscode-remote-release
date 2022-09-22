@@ -1,0 +1,35 @@
+---
+
+name: Question
+labels: ["*question"]
+description: The issue tracker is not for questions.
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        🚨 The issue tracker is not for questions 🚨
+
+        If you have a question about VS Code, please ask it on https://stackoverflow.com/questions/tagged/visual-studio-code and about
+        VS Code Remote on https://stackoverflow.com/questions/tagged/vscode-remote.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+    validations:
+      required: false
+
+  - type: dropdown
+    id: remote-con-type
+    attributes:
+      label: Remote Extension/Connection Type
+      multiple: true
+      options:
+        - 'SSH'
+        - 'Containers'
+        - 'WSL'
+        - 'Server'
+        - 'other'
+    validations:
+      required: false

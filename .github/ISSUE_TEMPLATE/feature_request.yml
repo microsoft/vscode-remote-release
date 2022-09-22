@@ -1,0 +1,35 @@
+---
+
+name: Feature request
+labels: ["feature-request"]
+description: Suggest an idea for this project
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this issue!
+
+        Please search existing issues to avoid creating duplicates.
+
+  - type: dropdown
+    id: remote-con-type
+    attributes:
+      label: Remote Extension/Connection Type
+      multiple: true
+      options:
+        - 'SSH'
+        - 'Containers'
+        - 'WSL'
+        - 'Server'
+        - 'other'
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the feature you'd like.
+    validations:
+      required: false
