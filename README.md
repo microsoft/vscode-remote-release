@@ -20,10 +20,9 @@ This repository is for providing feedback on the **[Visual Studio Remote Develop
 
 - **[Remote - SSH](https://aka.ms/vscode-remote/download/ssh)**
     - Remote - SSH: Editing Configuration Files
-- **[Remote - Containers](https://aka.ms/vscode-remote/download/containers)**
-- **[Remote - WSL](https://aka.ms/vscode-remote/download/wsl)**
-
-You may also use this repo to provide feedback on the **[Visual Studio Code Server](https://aka.ms/vscode-server-doc)**.
+- **[Dev Containers](https://aka.ms/vscode-remote/download/containers)**
+- **[WSL](https://aka.ms/vscode-remote/download/wsl)**
+- **[Remote - Tunnels](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-server)** and the **[Visual Studio Code Server](https://aka.ms/vscode-server-doc)**.
 
 If you are running into an issue with **another extension** you'd like to use with the Remote Development extensions, please raise an issue in the extension's repository. You can reference our [summary](https://aka.ms/vscode-remote/troubleshooting/extensions) of tips for remote related issues and our [extension guide](https://aka.ms/vscode-remote/developing-extensions) to help the extension author get started. 
 
