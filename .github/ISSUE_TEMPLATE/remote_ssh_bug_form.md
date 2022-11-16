@@ -1,12 +1,12 @@
 name: Remote-SSH Bug
 description: File a bug/issue for the Remote-SSH extension
-title: "[Remote-SSH BUG]: "
+title: "[Remote-SSH Bug]: "
 labels: ["ssh"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for filling out a bug issue and helping improve the Remote-SSH extension! 
+        Thanks for filling out a bug report and helping improve the Remote-SSH extension! 
         If you have a feature request for Remote-SSH please use the general `Feature request` issue creation button on the previous page.
   - type: checkboxes
     attributes:
@@ -20,12 +20,12 @@ body:
       label: Debugging Steps 
       description: Please go through this debugging help document and follow all the required steps, https://code.visualstudio.com/docs/remote/troubleshooting.
       options:
-      - label: I have following these debugging steps
+      - label: I have followed these debugging steps
         required: true
-      - label: I have tried both settings on `remote.SSH.useLocalServer`
+      - label: I have tried both settings of `remote.SSH.useLocalServer`
         required: true
-      - label: My SSH command works from the local terminal 
-      - label: My SSH command works from the local terminal with extensions enabled
+      - label: My SSH command works from a local terminal 
+      - label: My SSH command works from a local terminal with extensions disabled
   - type: textarea
     attributes:
       label: Versions
@@ -56,15 +56,17 @@ body:
   - type: textarea
     attributes:
       label: Remote-SSH Logs
-      description:  You can find them through going to `output` channel in your remote VS Code window then selecting the `remote-ssh` from the dropdown on the right
+      description:  You can find them through going to `output` channel in your remote VS Code window then selecting the `remote-ssh` from the dropdown on the right. Please make sure to provide the ENTIRE logs as all output is helpful to our debugging.
       value: |
-        <details><summary>Logs</summary>
-
-        ```bash
-
-        [paste logs]
+        <details>
+        <summary>User Settings</summary>
+        <p>
 
         ```
+        [PASTE LOGS HERE]
+        ```
+
+        </p>
         </details>
     validations:
       required: true
