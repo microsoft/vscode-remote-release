@@ -25,7 +25,7 @@ body:
       - label: I have tried both settings of `remote.SSH.useLocalServer`
         required: true
       - label: My SSH command works from a local terminal 
-      - label: My SSH command works from a local terminal with extensions disabled
+      - label: I can connect using the Remote-SSH extension on VS Code when all other VS Code extensions are disabled
   - type: textarea
     attributes:
       label: Versions
@@ -56,10 +56,10 @@ body:
   - type: textarea
     attributes:
       label: Remote-SSH Logs
-      description:  You can find them through going to `output` channel in your remote VS Code window then selecting the `remote-ssh` from the dropdown on the right. Please make sure to provide the ENTIRE logs as all output is helpful to our debugging.
+      description:  You can find them through going to `output` channel found under the `view` menu in your remote VS Code window then selecting the `remote-ssh` from the dropdown on the right. Please make sure to provide the entire log as all output is helpful to our debugging.
       value: |
         <details>
-        <summary>User Settings</summary>
+        <summary>Remote-SSH Log</summary>
         <p>
 
         ```
