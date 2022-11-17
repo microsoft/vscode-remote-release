@@ -4,14 +4,14 @@ If you are experiencing an issue with Remote-SSH in VS Code please follow these 
 
 1.  Many of our common issues with both Remote-SSH and remote development in VS Code can be found by going to our [troubleshooting docs](https://code.visualstudio.com/docs/remote/troubleshooting). Check there first to see if your problem is a common issue we have a solution to.
 2.  Try running your SSH connection command in your local terminal. To do this, search in your SSH logs for `Running ssh connection command` and copy the command directly after. This is the exact command the extension attempted to use. If you are **unable** to connect to your remote machine from the command line this means you **likely have an issue with your SSH** (for example the config file, authorization, or the command you are trying to run). Please look at SSH help docs to troubleshoot your issue in this case.
-3.  Now try running this command but add `echo "echo hello" | ssh hostname` to the end of your SSH command to confirm you can get a response from your server over your SSH connection.
+3.  Now try running this command but add `echo "echo hello" |` to the beginning of your SSH command to confirm that we can execute a script on your remote by piping it into ssh.
 4.  Also, try connecting via Remote-SS with all other VS Code extensions disabled. You can disable all extensions by going to the `Marketplace` tab the clicking the three dot menu and selecting `Disable All Install Extensions` then re-enabling the Remote-SSH extension. This command can be reversed afterwords by selected `Enable All Extensions` from the same dropdown. If your SSH connection works with all extensions disabled, it is likely one of your install extensions that is causing a problem.
-5. Try running your remote-SSH connect with both **server mode** settings as exampled below and see if one is successful. If both still fail, evaluate if the failure message is different. If you are submitting an issue please record this observation as we will ask you to include it in your bug submission.
+5. Try running your remote-SSH connect with both **server mode** settings as shown below and see if one is successful. If both still fail, evaluate if the failure message is different. If you are submitting an issue please record this observation as we will ask you to include it in your bug submission.
 
 ### Server Mode:
-The Remote-SSH extension has two different modes of connect, `Local Server Mode` and `Non-Local Server Mode`. This setting called `remote.SSH.localServerDownload` and its default value is auto where it first attempts `Non-Local Server Mode` and if this fails will try `Local Server Mode`. The difference is as follows:
-- `Local Server Mode`: The remote-SSH extension will attempt to download VS Code on the client then transfer it to the host with scp. Spawn and reuse the connection between windows
-- `Non-Local Server Mode`: The remote-SSH  extension will attempt to download VS Code on the host directly. Run ssh terminal
+The Remote-SSH extension has two different modes of connect, `Local Server Mode` and `Non-Local Server Mode`. This setting called `remote.SSH.useLocalServer` and its default value is unchecked which means it first attempts `Non-Local Server Mode` and if this fails will try `Local Server Mode`. This setting by default is disabled on Windows, to enable it on Windows you must enable it directly in your settings.json, not through the settings UI.
+- `Non-Local Server Mode`: The remote-SSH  extension will attempt to download VS Code on the host directly. 
+- `Local Server Mode`: The remote-SSH extension will attempt to download VS Code on the client then transfer it to the host with scp. It will spawn the SSH connection and then use the single connection between multiple VS Code windows.
 
 
 
