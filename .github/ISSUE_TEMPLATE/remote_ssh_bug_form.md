@@ -29,7 +29,7 @@ body:
   - type: textarea
     attributes:
       label: Versions
-      description: 
+      description: You can find the VSCode version with [these steps](https://code.visualstudio.com/docs/supporting/FAQ#_how-do-i-find-the-version.). Your Remote-SSH Extension Version number is located next to the name of the extension in the VSCode marketplace, and will follow the format vX.XX.X.
       value: |
         - VSCode Version:
         - Local OS Version:
