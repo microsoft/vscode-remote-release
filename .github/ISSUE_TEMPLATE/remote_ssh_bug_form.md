@@ -29,8 +29,9 @@ body:
   - type: textarea
     attributes:
       label: Versions
-      description: You can find the VSCode version with [these steps](https://code.visualstudio.com/docs/supporting/FAQ#_how-do-i-find-the-version.). Your Remote-SSH Extension Version number is located next to the name of the extension in the VSCode marketplace, and will follow the format vX.XX.X.
+      description: You can find the VS Code version with [these steps](https://code.visualstudio.com/docs/supporting/FAQ#_how-do-i-find-the-version.). Your Remote-SSH Extension Version number is located next to the name of the extension in the VSCode marketplace, and will follow the format vX.XX.X.
       value: |
+        - Remote-SSH Extension Version: 
         - VSCode Version:
         - Local OS Version:
         - Remote OS Version:
@@ -55,15 +56,15 @@ body:
       required: false
   - type: textarea
     attributes:
-      label: Remote-SSH Logs
-      description:  You can find them through going to `output` channel found under the `view` menu in your remote VS Code window then selecting the `remote-ssh` from the dropdown on the right. Please make sure to provide the entire log as all output is helpful to our debugging.
+      label: Remote-SSH Log
+      description:  You can find them through going to `output` channel found under the `view` menu in your remote VS Code window then selecting `remote-ssh` from the dropdown on the right. Please make sure to provide the entire log as all output is helpful to our debugging.
       value: |
         <details>
         <summary>Remote-SSH Log</summary>
         <p>
 
         ```
-        [PASTE LOGS HERE]
+        [PASTE LOG HERE]
         ```
 
         </p>
