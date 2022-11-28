@@ -22,9 +22,9 @@ body:
       options:
       - label: I have followed these debugging steps
         required: true
-      - label: I have tried both settings of `remote.SSH.useLocalServer`
+      - label: I have tried both values of the `remote.SSH.useLocalServer` setting
         required: true
-      - label: I have tried both settings of `remote.SSH.localServerDownload`
+      - label: I have tried both values of the `remote.SSH.localServerDownload` setting
         required: true
       - label: My SSH command works from a local terminal 
       - label: I can connect using the Remote-SSH extension on VS Code when all other VS Code extensions are disabled
@@ -37,11 +37,9 @@ body:
   - type: textarea
     attributes:
       label: Versions
-      description: You can find the VS Code version with [these steps](https://code.visualstudio.com/docs/supporting/FAQ#_how-do-i-find-the-version.). Your Remote-SSH Extension Version number is located next to the name of the extension in the VSCode marketplace, and will follow the format vX.XX.X.
+      description: You can find the VS Code version with [these steps](https://code.visualstudio.com/docs/supporting/FAQ#_how-do-i-find-the-version.). Your Remote-SSH Extension Version number is located next to the name of the extension in the VS Code marketplace, and will follow the format vX.XX.X.
       value: |
-        - Remote-SSH Extension Version: 
-        - VSCode Version:
-        - Local OS Version:
+        - VS Code Version:
         - Remote OS Version:
     validations:
       required: true
@@ -65,7 +63,7 @@ body:
   - type: textarea
     attributes:
       label: Remote-SSH Log
-      description:  You can find them through going to `output` channel found under the `view` menu in your remote VS Code window then selecting `remote-ssh` from the dropdown on the right. Please make sure to provide the entire log as all output is helpful to our debugging.
+      description:  To find logs first click on the `view` menu at the very top of your computer screen, and then select `output` from the dropdown. Finally, select `Remote-SSH` from the dropdown on the top right of the `output` window. Please make sure to provide the entire log as all output is helpful to our debugging.
       value: |
         <details>
         <summary>Remote-SSH Log</summary>
