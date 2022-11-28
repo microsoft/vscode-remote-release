@@ -24,8 +24,16 @@ body:
         required: true
       - label: I have tried both settings of `remote.SSH.useLocalServer`
         required: true
+      - label: I have tried both settings of `remote.SSH.localServerDownload`
+        required: true
       - label: My SSH command works from a local terminal 
       - label: I can connect using the Remote-SSH extension on VS Code when all other VS Code extensions are disabled
+  - type: textarea
+    attributes:
+      label: ->
+      description: If you did not check any box or if there was a difference in behavior when toggling either user setting please elaborate here.
+    validations:
+      required: false
   - type: textarea
     attributes:
       label: Versions
