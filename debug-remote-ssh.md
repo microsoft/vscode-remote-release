@@ -23,4 +23,4 @@ The Remote-SSH extension has another important setting, `remote.SSH.localServerD
 ### Other Suggestions:
 These are non-required suggestions in order to submit a bug to our repo but are common fixes for most people when they do reach out.
 1.  If you are attempting to "reset" your environment to retry the connection and it seems as though VS Code data is persisting on your remote side, run `Kill Remote Server` on your client side to reset.
-2.  Look at developer tools by going to `developer tools` on the command palette and checking for errors here. Extension startup or other errors might show up here.
+2.  Look at the developer tools by going to `help` in the menu then selecting `toggle developer tools` from the dropdown. Check for errors here because extension startup or other errors might show up here.
