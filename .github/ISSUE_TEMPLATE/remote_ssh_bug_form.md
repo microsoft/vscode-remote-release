@@ -2,6 +2,7 @@ name: Remote-SSH Bug
 description: File a bug/issue for the Remote-SSH extension
 title: "[Remote-SSH Bug]: "
 labels: ["ssh"]
+assignees: "eleanorjboyd"
 body:
   - type: markdown
     attributes:
@@ -63,7 +64,7 @@ body:
   - type: textarea
     attributes:
       label: Remote-SSH Log
-      description:  To find logs first click on the `view` menu at the very top of your computer screen, and then select `output` from the dropdown. Finally, select `Remote-SSH` from the dropdown on the top right of the `output` window. Please make sure to provide the entire log as all output is helpful to our debugging.
+      description:  To find logs first click on the `View` menu at the very top of your computer screen, and then select `Output` from the dropdown. Finally, select `Remote-SSH` from the dropdown on the top right of the `Output` window. Please make sure to provide the entire log as all output is helpful to our debugging.
       value: |
         <details>
         <summary>Remote-SSH Log</summary>
