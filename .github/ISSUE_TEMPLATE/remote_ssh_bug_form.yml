@@ -19,7 +19,7 @@ body:
   - type: checkboxes
     attributes:
       label: Debugging Steps 
-      description: Please go through this debugging help document and follow all the required steps, https://code.visualstudio.com/docs/remote/troubleshooting.
+      description: Please go through this debugging help document and follow all the required steps, https://github.com/microsoft/vscode-remote-release/wiki/Debugging-for-Remote-SSH.
       options:
       - label: I have followed these debugging steps
         required: true
