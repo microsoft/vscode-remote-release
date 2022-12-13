@@ -1,0 +1,12 @@
+Request URL: https://www.interactivebrokers.com/tradingapi/v1/accounts
+Request method: POST
+Accept: */*
+content-type: application/x-www-form-urlencoded
+User-Agent: GitHub-Hookshot/2179efe
+X-GitHub-Delivery: 28ecc230-7a84-11ed-8c35-3caae4919b30
+X-GitHub-Event: ping
+X-GitHub-Hook-ID: 392281456
+X-GitHub-Hook-Installation-Target-ID: 571799803
+X-GitHub-Hook-Installation-Target-Type: repository
+X-Hub-Signature: sha1=0090c54f4edeab6ed0fa35358cd9d26bc2c5c6d6
+X-Hub-Signature-256: sha256=26bea24ab850f973fc3143c83d9e882792f174a6e77198026f616a5ecdfd5f5e
