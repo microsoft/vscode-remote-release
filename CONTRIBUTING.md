@@ -6,7 +6,7 @@ Creative Commons Attribution 4.0 License (International): https://creativecommon
 
 # Contributing to VS Code Remote Development
 
-There are many ways for you to contribute to VS Code Remote Development. This document will outline a number of ways you can get involved.
+There are many ways for you to contribute to VS Code Remote Development (WSL, Remote - SSH, Remote - Tunnels, Dev Containers). This document will outline a number of ways you can get involved.
 
 ## Reporting Issues
 
@@ -17,7 +17,12 @@ Have you identified a reproducible problem in VS Code Remote extensions? Have a 
 This repository is specifically for the VS Code Remote Development extension pack and related extensions. Consider these other locations for your feedback if your issue is not directly related to these extensions:
 
 - If you are encountering an issue with another extension when running in a remote environment, please raise an issue in the extension's repository. You can reference the [summary](https://aka.ms/vscode-remote/troubleshooting/extensions) of tips for resolving extension issues and our [extension guide](https://aka.ms/vscode-remote/developing-extensions) to help the extension author get started.
-- You can report issues related to dev container definitions in the [vscode-dev-containers repository](https://aka.ms/vscode-dev-containers).
+- You can report issues related to offically maintained Dev Container Templates at [devcontainers/templates](https://github.com/devcontainers/templates).
+- You can report issues related to offically maintained Dev Container Features at [devcontainers/features](https://github.com/devcontainers/features).
+- Image issues for `mcr.microsoft.com/devcontainers` and `mcr.microsoft.com/vscode/devcontainers` images can be raised at [devcontainers/images](https://github.com/devcontainers/images).
+- For issues related to the Dev Container specification, raise an issue at [devcontainers/spec](https://github.com/devcontainers/spec).
+- For issues related to the Dev Container CLI, raise an issue at [devcontainers/cli](https://github.com/devcontainers/cli).
+- Github Codespaces issues should be raised in [GitHub Feedback](https://github.com/github/feedback/discussions/categories/codespaces).
 - If you are not looking to report an issue related to these extensions, you may be looking for the [VS Code OSS](https://github.com/Microsoft/vscode) repository. However, note that, the VS Code project is distributed across multiple repositories. See the list of [Related Projects](https://github.com/Microsoft/vscode/wiki/Related-Projects) if you aren't sure which repo is correct.
 
 ### Look For an Existing Issue
