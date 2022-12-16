@@ -10,7 +10,10 @@ about: Create a report to help us improve
 - VSCode Version:
 - Local OS Version:
 - Remote OS Version:
-- Remote Extension/Connection Type: SSH/Containers/WSL/Server
+- Remote Extension/Connection Type: Containers/WSL/Server
+
+<!-- If your bug is related to Remote-SSH, please use the SSH-specific reporter: https://github.com/microsoft/vscode-remote-release/issues/new?assignees=eleanorjboyd&labels=ssh&template=a_remote_ssh_bug_form.yml&title=%5BRemote-SSH+Bug%5D%3A+ -->
+
 - Logs:
 
 Steps to Reproduce:
