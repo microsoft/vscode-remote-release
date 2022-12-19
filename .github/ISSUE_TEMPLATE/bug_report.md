@@ -6,7 +6,7 @@ about: Create a report to help us improve
 <!-- Please search existing issues to avoid creating duplicates, and review our troubleshooting tips: https://code.visualstudio.com/docs/remote/troubleshooting -->
 <!-- Please attach logs to help us diagnose your issue. Learn more here: https://code.visualstudio.com/docs/remote/troubleshooting#_reporting-issues and here: https://code.visualstudio.com/docs/remote/vscode-server#_where-can-i-provide-feedback-or-report-an-issue -->
 <!-- Also please test using the latest insiders build to make sure your issue has not already been fixed: https://code.visualstudio.com/insiders/ -->
-<!-- For all Remote-SSH bugs, please use the [Remote-SSH bug form](https://github.com/microsoft/vscode-remote-release/issues/new?assignees=eleanorjboyd&labels=ssh&template=a_remote_ssh_bug_form.yml&title=%5BRemote-SSH+Bug%5D%3A+) -->
+<!-- For all Remote-SSH bugs, please submit them using the Remote-SSH bug form. Access it here: https://github.com/microsoft/vscode-remote-release/issues/new?assignees=eleanorjboyd&labels=ssh&template=a_remote_ssh_bug_form.yml&title=%5BRemote-SSH+Bug%5D%3A+ -->
 
 - VSCode Version:
 - Local OS Version:
