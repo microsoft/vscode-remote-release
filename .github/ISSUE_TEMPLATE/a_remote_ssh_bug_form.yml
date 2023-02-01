@@ -12,36 +12,44 @@ body:
   - type: checkboxes
     attributes:
       label: Is there an existing issue for this bug?
-      description: Please search to see if an issue already exists for the bug you encountered.
+      description: Please search to see if an open or closed issue already exists for the bug you have encountered. Link to search, [here](https://github.com/microsoft/vscode-remote-release/issues?q=is%3Aopen+is%3Aissue+label%3Assh).
       options:
       - label: I have searched the existing issues
         required: true 
   - type: checkboxes
     attributes:
-      label: Debugging Steps 
-      description: Please go through this debugging help document and follow all the required steps, https://github.com/microsoft/vscode-remote-release/wiki/Debugging-for-Remote-SSH.
+      label: Required Troubleshooting Steps 
+      description: Please go through this troubleshooting help document and follow all the required steps, https://code.visualstudio.com/docs/remote/troubleshooting.
       options:
-      - label: I have followed these debugging steps
+      - label: I have followed these troubleshooting steps
         required: true
       - label: I have tried both values of the `remote.SSH.useLocalServer` setting
-        required: true
-      - label: My SSH command works from a local terminal 
-      - label: I can connect using the Remote-SSH extension on VS Code when all other VS Code extensions are disabled
+  - type: dropdown
+    attributes:
+      label: Connect Locally
+      description: When you tried running the ssh connection command in your local terminal what was the outcome? (please verify this connection command is exactly the same as the one in the logs labeled “Running SSH connection command”. Steps provided in troubleshoot doc.)
+      options:
+        - It connects successfully
+        - It doesn’t connect successfully (same error message)
+        - It doesn’t connect successfully (different error message)
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Disable Extensions
+      description: With all other extensions disable did a connection issue occur?
+      options:
+        - It connects successfully
+        - It doesn’t connect successfully (same error message)
+        - It doesn’t connect successfully (different error message)
+    validations:
+      required: true
   - type: textarea
     attributes:
       label: ->
-      description: If you did not check any box or if there was a difference in behavior when toggling `remote.SSH.useLocalServer` please elaborate here.
+      description: If your connection had a different error message when trying one of the above steps or if there was an impact by toggling the `remote.SSH.useLocalServer` setting please elaborate here.
     validations:
       required: false
-  - type: textarea
-    attributes:
-      label: Versions
-      description: You can find the VS Code version with [these steps](https://code.visualstudio.com/docs/supporting/FAQ#_how-do-i-find-the-version.). Your Remote-SSH Extension Version number is located next to the name of the extension in the VS Code marketplace, and will follow the format vX.XX.X.
-      value: |
-        - VS Code Version:
-        - Remote OS Version:
-    validations:
-      required: true
   - type: textarea
     attributes:
       label: Expected Behavior
