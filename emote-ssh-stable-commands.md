@@ -1,4 +1,5 @@
-The Remote-SSH extenions is a private repos that other extensions rely on for varying functionality. Below is a list of commands that we will do our best to keep stable similar to an API. These commands, now published externally here, will be maintained and changes will not be made without sufficent warning to allow for other dependent extensions to function correctly.
+The Remote-SSH extension is a private repo that other extensions rely on for varying functionality. Below is a list of commands that we will do our best to keep stable like an API. These commands, now published externally here, will be maintained and changes will not be made without sufficient warning to allow for other dependent extensions to function correctly.
+
 
 
 ## Remote-SSH Stable Commands:
