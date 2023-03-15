@@ -6,8 +6,6 @@ The Remote-SSH extension is a private repo that other extensions rely on for var
 
 `opensshremotes.openEmptyWindow` - Opens a new window and attempts to connect to the remote provided through the `args`
 - parameters: [`(args?: IOpenWindowsArgs)`](#IOpenWindowsArgs-Definition)
-
-### My Multi Word Header
 - returns: none
 - this command is called with the command palette command "Connect to Host.."
 
