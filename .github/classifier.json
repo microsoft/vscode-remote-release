@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/microsoft/vscode-github-triage-actions/master/classifier/apply/apply-labels/classifier-config.schema.json",
+  "$schema": "https://raw.githubusercontent.com/microsoft/vscode-github-triage-actions/stable/classifier-deep/apply/apply-labels/deep-classifier-config.schema.json",
   "assignees": {},
   "labels": {
     "wsl": {
@@ -11,8 +11,7 @@
     "ssh": {
       "applyLabel": true
     },
-    "code-server": {
-      "applyLabel": true
-    }
+    "code-server": {"assign": ["connor4312"]},
+    "tunnels": {"assign": ["connor4312"]}
   }
 }
