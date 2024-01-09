@@ -5,6 +5,10 @@ on:
   repository_dispatch:
     types: [trigger_classifier_runner]
 
+permissions:
+  issues: write
+  contents: read
+
 jobs:
   main:
     runs-on: ubuntu-latest

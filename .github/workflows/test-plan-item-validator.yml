@@ -3,6 +3,10 @@ on:
   issues:
     types: [edited]
 
+permissions:
+  issues: write
+  contents: read
+
 jobs:
   main:
     runs-on: ubuntu-latest

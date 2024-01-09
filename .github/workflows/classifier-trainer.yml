@@ -6,6 +6,10 @@ on:
     types: [trigger_classifier_trainer]
   workflow_dispatch:
 
+permissions:
+  issues: write
+  contents: read
+
 jobs:
   main:
     runs-on: ubuntu-latest

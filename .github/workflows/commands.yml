@@ -3,6 +3,10 @@ on:
   issue_comment:
     types: [created]
 
+permissions:
+  issues: write
+  contents: read
+
 # also make changes in ./on-label.yml
 jobs:
   main:
