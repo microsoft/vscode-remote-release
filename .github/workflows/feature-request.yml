@@ -7,10 +7,6 @@ on:
   schedule:
     - cron: 20 2 * * * # 4:20am Zurich
 
-permissions:
-  issues: write
-  contents: read
-
 # also make changes in ./on-label.yml
 jobs:
   main:

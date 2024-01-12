@@ -5,10 +5,6 @@ on:
   repository_dispatch:
     types: [trigger-locker]
 
-permissions:
-  issues: write
-  contents: read
-
 jobs:
   main:
     runs-on: ubuntu-latest
@@ -24,6 +20,7 @@ jobs:
       - name: Run Locker
         uses: ./actions/locker
         with:
+          token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
           daysSinceClose: 45
           appInsightsKey: ${{secrets.TRIAGE_ACTIONS_APP_INSIGHTS}}
           daysSinceUpdate: 3

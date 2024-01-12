@@ -6,10 +6,6 @@ on:
     types: [trigger_classifier_trainer]
   workflow_dispatch:
 
-permissions:
-  issues: write
-  contents: read
-
 jobs:
   main:
     runs-on: ubuntu-latest
@@ -27,6 +23,7 @@ jobs:
       - name: "Run Classifier: Scraper"
         uses: ./actions/classifier/train/fetch-issues
         with:
+          token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
           areas: wsl|containers|ssh|code-server
           assignees: aeschli|roblourens|chrmarti|connor4312
       - name: Set up Python 3.7
@@ -42,5 +39,6 @@ jobs:
       - name: "Run Classifier: Upload"
         uses: ./actions/classifier/train/upload-models
         with:
+          token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
           blobContainerName: vscode-remote-release-models
           blobStorageKey: ${{secrets.AZURE_BLOB_STORAGE_CONNECTION_STRING}}
