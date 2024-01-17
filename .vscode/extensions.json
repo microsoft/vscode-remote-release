@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "njpwerner.autodocstring",
+        "ms-vscode.js-debug-nightly",
+        "editorconfig.editorconfig",
+        "formulahendry.code-runner",
+        "christian-kohler.path-intellisense"
+    ]
+}
