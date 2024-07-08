@@ -1,4 +1,9 @@
 name: "Classifier: Trainer"
+
+permissions:
+  id-token: write
+  contents: read
+  
 on:
   schedule:
     - cron: 0 0 5 * *
@@ -9,6 +14,7 @@ on:
 jobs:
   main:
     runs-on: ubuntu-latest
+    environment: main
     steps:
       - name: Checkout Actions
         uses: actions/checkout@v2
@@ -41,4 +47,3 @@ jobs:
         with:
           token: ${{secrets.VSCODE_ISSUE_TRIAGE_BOT_PAT}}
           blobContainerName: vscode-remote-release-models
-          blobStorageKey: ${{secrets.AZURE_BLOB_STORAGE_CONNECTION_STRING}}
