@@ -97,10 +97,6 @@ We use a bot to help us manage issues. This bot currently:
 
 If you believe the bot got something wrong, please open a new issue and let us know.
 
-## Contributing Dev Container Definitions
-
-If you want to contribute to the provided dev container definitions, please submit a pull request (or raise an issue) in the [vscode-dev-containers repository](https://aka.ms/vscode-dev-containers) for additional details.
-
 ## Contributing to Documentation
 
 If you want to contribute to our documentation, please submit a pull request (or raise an issue) in the [vscode-docs repository](https://github.com/Microsoft/vscode-docs).
