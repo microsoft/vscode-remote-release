@@ -2,7 +2,7 @@ name: Remote-SSH Bug
 description: File a bug/issue for the Remote-SSH extension
 title: "[Remote-SSH Bug]: "
 labels: ["ssh"]
-assignees: "joshspicer"
+assignees: "joshspicer", "roblourens"
 body:
   - type: markdown
     attributes:
