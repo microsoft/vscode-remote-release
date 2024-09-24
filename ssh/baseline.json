@@ -1,0 +1,29 @@
+{
+    "$schema": "./baseline.schema.json",
+    "baselines": [
+        {
+            "id": "fedora_tools_execServer",
+            "displayName": "Fedora latest with common tools",
+            "description": "The latest Fedora image with common tools installed (wget)",
+            "config": "fedora+",
+            "overrideSettings": {
+                "useExecServer": true
+            },
+            "expectSuccess": true,
+            "sshPort": 5670,
+            "validators": []
+        },
+        {
+            "id": "fedora_tools_noExecServer",
+            "displayName": "Fedora latest with common tools",
+            "description": "The latest Fedora image with common tools installed (wget)",
+            "config": "fedora+",
+            "overrideSettings": {
+                "useExecServer": false
+            },
+            "expectSuccess": true,
+            "sshPort": 5670,
+            "validators": []
+        }
+    ]
+}
