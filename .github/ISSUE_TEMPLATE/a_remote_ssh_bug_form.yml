@@ -25,7 +25,7 @@ body:
       options:
       - label: I have followed these troubleshooting steps
         required: true
-      - label: I have tried both values of the `remote.SSH.useLocalServer` setting
+      - label: I have tried both values of the `remote.SSH.useLocalServer` setting [(more info here)](https://github.com/microsoft/vscode-remote-release/wiki/Remote-SSH-troubleshooting#troubleshooting-steps)
   - type: dropdown
     attributes:
       label: Connect Locally
