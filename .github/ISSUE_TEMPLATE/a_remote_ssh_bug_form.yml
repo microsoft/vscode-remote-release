@@ -1,19 +1,15 @@
 name: Remote-SSH Bug
 description: File a bug/issue for the Remote-SSH extension
-title: "[Remote-SSH Bug]: <MY_TITLE>"
 labels: ["ssh"]
 assignees: 
   - "joshspicer"
-  - "roblourens"
 body:
   - type: markdown
     attributes:
       value: |
         Thank you for taking the time to fill out a bug report, we appreciate your help in improving Remote - SSH!
         
-        Please take the time to fill out this brief form to ensure we can triage your issue promptly.  Please be sure to **replace <MY_TITLE> above with something descriptive!**
-        
-        If you have a feature request for Remote-SSH please use the general `Feature request` issue creation button on the previous page.
+        Please take the time to fill out this brief form to ensure we can triage your issue promptly.  If you have a feature request for Remote-SSH please use the general `Feature request` issue creation button on the previous page.
   - type: checkboxes
     attributes:
       label: Is there an existing issue for this bug?
