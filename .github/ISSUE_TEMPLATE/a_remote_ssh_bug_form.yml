@@ -1,51 +1,68 @@
 name: Remote-SSH Bug
 description: File a bug/issue for the Remote-SSH extension
-title: "[Remote-SSH Bug]: "
+title: "[Remote-SSH Bug]: <MY_TITLE>"
 labels: ["ssh"]
 assignees: 
-   - "joshspicer"
-   - "roblourens"
+  - "joshspicer"
+  - "roblourens"
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for filling out a bug report and helping improve the Remote-SSH extension! 
+        Thanks for filling out a bug report and helping improve the Remote - SSH extension! **Please replace <MY_TITLE> above.**
         If you have a feature request for Remote-SSH please use the general `Feature request` issue creation button on the previous page.
   - type: checkboxes
     attributes:
       label: Is there an existing issue for this bug?
-      description: Please search [here](https://github.com/microsoft/vscode-remote-release/issues?q=is%3Aopen+is%3Aissue+label%3Assh) to see if an open or closed issue already exists for the bug you have encountered.
+      description: Please search [here](https://github.com/microsoft/vscode-remote-release/issues?q=is%3Aopen+is%3Aissue+label%3Assh) to see if an open or closed issue already exists for the bug you have found.
       options:
-      - label: I have searched the existing issues
-        required: true 
+        - label: I have searched the existing open issues and found none that apply. 
+          required: true
+        - label: If I find any issue of interest that is related or closed, I will included a link to it in this issue.
+          required: true
   - type: checkboxes
     attributes:
       label: Required Troubleshooting Steps 
-      description: Please go through this troubleshooting help document and follow all the required steps, https://code.visualstudio.com/docs/remote/troubleshooting.
+      description: Please go through the [**Troubleshooting Wiki**](https://github.com/microsoft/vscode-remote-release/wiki/Remote-SSH-troubleshooting) and follow all the required steps.
       options:
-      - label: I have followed these troubleshooting steps
-        required: true
-      - label: I have tried both values of the `remote.SSH.useLocalServer` setting [(more info here)](https://github.com/microsoft/vscode-remote-release/wiki/Remote-SSH-troubleshooting#troubleshooting-steps)
+        - label: I have followed these troubleshooting steps
+          required: true
+        - label: I have tried both values of the `remote.SSH.useLocalServer` setting
+          required: true
+        - label: My issue was not covered in the [**Tips and Tricks**](https://code.visualstudio.com/docs/remote/troubleshooting#_ssh-tips) linked from the [troubleshooting wiki](https://github.com/microsoft/vscode-remote-release/wiki/Remote-SSH-troubleshooting).
+          required: true
+        - label: "I will include a complete copy of my Remote - SSH logs by running `Remote-SSH: Show Log` in the command palette or opening the `Output` panel"
+          required: true
   - type: dropdown
+    id: copilot-chat
     attributes:
-      label: Connect Locally
-      description: When you tried running the ssh connection command in your local terminal what was the outcome? (please verify this connection command is exactly the same as the one in the logs labeled “Running SSH connection command”. Steps provided in troubleshoot doc.)
+      label: "[Optional] Diagnose with Copilot"
+      description: Recent versions of Remote - SSH include a [Copilot Chat Participant](https://code.visualstudio.com/docs/copilot/getting-started-chat) named `@remote-ssh`. When prompted, this participant can help diagnose issues.
       options:
-        - It connects successfully
-        - It doesn’t connect successfully (same error message)
-        - It doesn’t connect successfully (different error message)
+        - I did not ask the `@remote-ssh` participant for help
+        - I asked `@remote-ssh` but it did not help
+        - I asked `@remote-ssh` and it helped, but I still want to report this bug
+  - type: dropdown
+    id: manually-run-ssh-cmd
+    attributes:
+      label: In step 2 of the troubleshooting wiki, what was the result of running the generated SSH command verbatim _outside_ of VS Code?
+      options:
+        - I did not try step 2 of the troubleshooting steps
+        - I could successfully SSH to the remote machine with the generated SSH command
+        - I could *not* successfully SSH to the remote machine, and the error was _the same_ to what I saw in VS Code
+        - I could *not* successfully SSH to the remote machine, and the error was _different_ than what I saw in VS Code
     validations:
       required: true
   - type: textarea
     attributes:
-      label: ->
-      description: If your connection had a different error message when trying one of the above steps or if there was an impact by toggling the `remote.SSH.useLocalServer` setting please elaborate here.
+      label: Expected Behavior
+      description: A concise description of what you expected to happen.
     validations:
       required: false
   - type: textarea
     attributes:
-      label: Expected Behavior
-      description: A concise description of what you expected to happen.
+      label: Actual Behavior
+      description: A concise description of what is actually happening
     validations:
       required: false
   - type: textarea
@@ -62,14 +79,14 @@ body:
   - type: textarea
     attributes:
       label: Remote-SSH Log
-      description:  To find logs first click on the `View` menu at the very top of your computer screen, and then select `Output` from the dropdown. Finally, select `Remote-SSH` from the dropdown on the top right of the `Output` window. Please make sure to provide the entire log as all output is helpful to our debugging.
+      description: To find logs first click on the `View` menu at the very top of your computer screen, and then select `Output` from the dropdown. Finally, select `Remote-SSH` from the dropdown on the right.
       value: |
         <details>
         <summary>Remote-SSH Log</summary>
         <p>
 
         ```
-        [PASTE LOG HERE]
+        [PASTE LOG HERE WITHIN THE BACKTICKS TO FORMAT]
         ```
 
         </p>
@@ -81,7 +98,7 @@ body:
       label: Anything else?
       description: |
         Links? References? Anything that will give us more context about the issue you are encountering!
-  
+
         Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
     validations:
       required: false
