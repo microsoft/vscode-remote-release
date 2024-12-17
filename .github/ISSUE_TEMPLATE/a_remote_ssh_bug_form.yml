@@ -9,7 +9,10 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for filling out a bug report and helping improve the Remote - SSH extension! **Please replace <MY_TITLE> above.**
+        Thank you for taking the time to fill out a bug report, we appreciate your help in improving Remote - SSH!
+        
+        Please take the time to fill out this brief form to ensure we can triage your issue promptly.  Please be sure to **replace <MY_TITLE> above with something descriptive!**
+        
         If you have a feature request for Remote-SSH please use the general `Feature request` issue creation button on the previous page.
   - type: checkboxes
     attributes:
@@ -25,32 +28,49 @@ body:
       label: Required Troubleshooting Steps 
       description: Please go through the [**Troubleshooting Wiki**](https://github.com/microsoft/vscode-remote-release/wiki/Remote-SSH-troubleshooting) and follow all the required steps.
       options:
-        - label: I have followed these troubleshooting steps
+        - label: I have read and performed the troubleshooting steps
           required: true
         - label: I have tried both values of the `remote.SSH.useLocalServer` setting
           required: true
-        - label: My issue was not covered in the [**Tips and Tricks**](https://code.visualstudio.com/docs/remote/troubleshooting#_ssh-tips) linked from the [troubleshooting wiki](https://github.com/microsoft/vscode-remote-release/wiki/Remote-SSH-troubleshooting).
+        - label: My issue was **not** covered in the [**Tips and Tricks**](https://code.visualstudio.com/docs/remote/troubleshooting#_ssh-tips) linked from the [Troubleshooting Wiki](https://github.com/microsoft/vscode-remote-release/wiki/Remote-SSH-troubleshooting).
           required: true
-        - label: "I will include a complete copy of my Remote - SSH logs by running `Remote-SSH: Show Log` in the command palette or opening the `Output` panel"
+        - label: "I will include a complete copy of my Remote - SSH logs by running **Remote-SSH: Show Log** in the command palette or from **View > Output** in the menu bar"
           required: true
   - type: dropdown
     id: copilot-chat
     attributes:
       label: "[Optional] Diagnose with Copilot"
-      description: Recent versions of Remote - SSH include a [Copilot Chat Participant](https://code.visualstudio.com/docs/copilot/getting-started-chat) named `@remote-ssh`. When prompted, this participant can help diagnose issues.
+      description: Recent versions of Remote - SSH include a [Copilot Chat Participant](https://code.visualstudio.com/docs/copilot/getting-started-chat) named `@remote-ssh`. When prompted, this participant can help diagnose issues or answer general SSH configuration questions.
       options:
-        - I did not ask the `@remote-ssh` participant for help
-        - I asked `@remote-ssh` but it did not help
-        - I asked `@remote-ssh` and it helped, but I still want to report this bug
+        - I did not ask the @remote-ssh participant for help
+        - I asked @remote-ssh but it did not help
+        - I asked @remote-ssh and it helped, but I still want to report this bug
+    validations:
+      required: true
   - type: dropdown
     id: manually-run-ssh-cmd
     attributes:
-      label: In step 2 of the troubleshooting wiki, what was the result of running the generated SSH command verbatim _outside_ of VS Code?
+      label: In step 2 of the troubleshooting wiki, what was the result of running the generated SSH command verbatim outside of VS Code?
       options:
         - I did not try step 2 of the troubleshooting steps
-        - I could successfully SSH to the remote machine with the generated SSH command
-        - I could *not* successfully SSH to the remote machine, and the error was _the same_ to what I saw in VS Code
-        - I could *not* successfully SSH to the remote machine, and the error was _different_ than what I saw in VS Code
+        - I COULD successfully SSH to the remote machine with the generated SSH command
+        - I could NOT successfully SSH to the remote machine, and the error was the SAME to what I saw in VS Code
+        - I could NOT successfully SSH to the remote machine, and the error was DIFFERENT than what I saw in VS Code
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Remote-SSH Log
+      description: To find logs first click on the `View` menu at the very top of your computer screen, and then select `Output` from the dropdown. Finally, select `Remote-SSH` from the dropdown on the right.
+      value: |
+        <details>
+        <summary>Remote-SSH Log</summary>
+        <p>
+        ```
+        [PASTE LOG HERE WITHIN THE BACKTICKS TO FORMAT]
+        ```
+        </p>
+        </details>
     validations:
       required: true
   - type: textarea
@@ -58,13 +78,13 @@ body:
       label: Expected Behavior
       description: A concise description of what you expected to happen.
     validations:
-      required: false
+      required: true
   - type: textarea
     attributes:
       label: Actual Behavior
       description: A concise description of what is actually happening
     validations:
-      required: false
+      required: true
   - type: textarea
     attributes:
       label: Steps To Reproduce
@@ -74,23 +94,6 @@ body:
         2. With this config...
         3. Run '...'
         4. See error...
-    validations:
-      required: false
-  - type: textarea
-    attributes:
-      label: Remote-SSH Log
-      description: To find logs first click on the `View` menu at the very top of your computer screen, and then select `Output` from the dropdown. Finally, select `Remote-SSH` from the dropdown on the right.
-      value: |
-        <details>
-        <summary>Remote-SSH Log</summary>
-        <p>
-
-        ```
-        [PASTE LOG HERE WITHIN THE BACKTICKS TO FORMAT]
-        ```
-
-        </p>
-        </details>
     validations:
       required: true
   - type: textarea
