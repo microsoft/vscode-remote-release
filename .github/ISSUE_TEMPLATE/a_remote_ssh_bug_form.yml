@@ -9,43 +9,60 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for filling out a bug report and helping improve the Remote-SSH extension! 
+        Thanks for filling out a bug report and helping improve the Remote-SSH extension! **Please enter a descriptive title above.**
         If you have a feature request for Remote-SSH please use the general `Feature request` issue creation button on the previous page.
   - type: checkboxes
     attributes:
       label: Is there an existing issue for this bug?
       description: Please search [here](https://github.com/microsoft/vscode-remote-release/issues?q=is%3Aopen+is%3Aissue+label%3Assh) to see if an open or closed issue already exists for the bug you have encountered.
       options:
-      - label: I have searched the existing issues
-        required: true 
+      - label: I have searched the existing issues and found none that apply. 
+        required: true
+      - label: If I found any issue of interest that is related or closed, I have included a link to it in this issue.
+        required: true
   - type: checkboxes
     attributes:
       label: Required Troubleshooting Steps 
-      description: Please go through this troubleshooting help document and follow all the required steps, https://code.visualstudio.com/docs/remote/troubleshooting.
+      description: Please go through the [**Troubleshooting Wiki**](https://github.com/microsoft/vscode-remote-release/wiki/Remote-SSH-troubleshooting) and follow all the required steps.
       options:
       - label: I have followed these troubleshooting steps
         required: true
-      - label: I have tried both values of the `remote.SSH.useLocalServer` setting [(more info here)](https://github.com/microsoft/vscode-remote-release/wiki/Remote-SSH-troubleshooting#troubleshooting-steps)
-  - type: dropdown
-    attributes:
-      label: Connect Locally
-      description: When you tried running the ssh connection command in your local terminal what was the outcome? (please verify this connection command is exactly the same as the one in the logs labeled “Running SSH connection command”. Steps provided in troubleshoot doc.)
-      options:
-        - It connects successfully
-        - It doesn’t connect successfully (same error message)
-        - It doesn’t connect successfully (different error message)
-    validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: ->
-      description: If your connection had a different error message when trying one of the above steps or if there was an impact by toggling the `remote.SSH.useLocalServer` setting please elaborate here.
-    validations:
-      required: false
+      - label: I have tried both values of the `remote.SSH.useLocalServer` setting
+        required: true
+      - label: My issue was not covered in the [**Tips and Tricks**](https://code.visualstudio.com/docs/remote/troubleshooting#_ssh-tips) linked from the [troubleshooting wiki](https://github.com/microsoft/vscode-remote-release/wiki/Remote-SSH-troubleshooting)
+        required: true
+      - label: I will include a complete copy of my Remote - SSH logs when submitting this issue (`> Remote-SSH: Show Log` in the command palette).
+        required: true
+   - type: dropdown
+     id: copilot-chat
+     attributes:
+       label: [Optional] Diagnose with Copilot
+       description: Recent versions of Remote - SSH include a [Copilot Chat Participant](https://code.visualstudio.com/docs/copilot/getting-started-chat) named `@remote-ssh`.  When prompted, this participant can look at your previous connection logs and provide real-time troubleshooting steps.
+       options:
+         - I did not ask the `@remote-ssh` participant for help
+         - I asked `@remote-ssh` but it did not help
+         - I asked `@remote-ssh` and it helped, but I still want to report this bug
+   - type: dropdown
+     id: manually-run-ssh-cmd
+     attributes:
+       label: In step 2 of the troubleshooting wiki, what was the result of running the generated SSH command verbatim _outside_ of VS Code?
+       options:
+         - I did not try step 2 of the troubleshooting steps
+         - I could successfully SSH to the remote machine with the generated SSH command
+         - I could *not* successfully SSH to the remote machine, and the error was _the same_ to what I saw in VS Code
+         - I could *not* successfully SSH to the remote machine, and the error was _different_ than what I saw in VS Code
+     validations:
+       required: true
   - type: textarea
     attributes:
       label: Expected Behavior
       description: A concise description of what you expected to happen.
+    validations:
+      required: false
+  - type: textarea
+    attributes:
+      label: Actual Behavior
+      description: A concise description of what is actually happening
     validations:
       required: false
   - type: textarea
@@ -69,7 +86,7 @@ body:
         <p>
 
         ```
-        [PASTE LOG HERE]
+        [PASTE LOG HERE WITHIN THE BACKTICKS TO FORMAT]
         ```
 
         </p>
