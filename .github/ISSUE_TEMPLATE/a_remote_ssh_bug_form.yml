@@ -31,7 +31,7 @@ body:
         required: true
       - label: My issue was not covered in the [**Tips and Tricks**](https://code.visualstudio.com/docs/remote/troubleshooting#_ssh-tips) linked from the [troubleshooting wiki](https://github.com/microsoft/vscode-remote-release/wiki/Remote-SSH-troubleshooting)
         required: true
-      - label: I will include a complete copy of my Remote - SSH logs when submitting this issue (`> Remote-SSH: Show Log` in the command palette).
+      - label: I will include a complete copy of my Remote - SSH logs when submitting this issue (`Remote-SSH: Show Log` in the command palette).
         required: true
    - type: dropdown
      id: copilot-chat
