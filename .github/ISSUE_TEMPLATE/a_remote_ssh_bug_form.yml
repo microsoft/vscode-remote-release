@@ -60,16 +60,31 @@ body:
       required: true
   - type: textarea
     attributes:
+      label: Remote-SSH Log
+      description: To find logs first click on the `View` menu at the very top of your computer screen, and then select `Output` from the dropdown. Finally, select `Remote-SSH` from the dropdown on the right.
+      value: |
+        <details>
+        <summary>Remote-SSH Log</summary>
+        <p>
+        ```
+        [PASTE LOG HERE WITHIN THE BACKTICKS TO FORMAT]
+        ```
+        </p>
+        </details>
+    validations:
+      required: true
+  - type: textarea
+    attributes:
       label: Expected Behavior
       description: A concise description of what you expected to happen.
     validations:
-      required: false
+      required: true
   - type: textarea
     attributes:
       label: Actual Behavior
       description: A concise description of what is actually happening
     validations:
-      required: false
+      required: true
   - type: textarea
     attributes:
       label: Steps To Reproduce
@@ -80,7 +95,7 @@ body:
         3. Run '...'
         4. See error...
     validations:
-      required: false
+      required: true
   - type: textarea
     attributes:
       label: Anything else?
