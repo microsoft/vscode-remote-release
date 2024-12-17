@@ -1,6 +1,6 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: Bug report for Dev Containers/WSL/Remote Server
+about: Create a report to help us improve. 
 ---
 
 <!-- Please search existing issues to avoid creating duplicates, and review our troubleshooting tips: https://code.visualstudio.com/docs/remote/troubleshooting -->
@@ -10,6 +10,7 @@ about: Create a report to help us improve
 - VSCode Version:
 - Local OS Version:
 - Remote OS Version:
+<-- Are you reporting a Remote - SSH issue? To prevent delays, please STOP and use the `Remote - SSH Bug` issue template instead -->
 - Remote Extension/Connection Type: Containers/WSL/Server
 
 <!-- If your bug is related to Remote-SSH, please use the SSH-specific reporter: https://github.com/microsoft/vscode-remote-release/issues/new?assignees=eleanorjboyd&labels=ssh&template=a_remote_ssh_bug_form.yml&title=%5BRemote-SSH+Bug%5D%3A+ -->
