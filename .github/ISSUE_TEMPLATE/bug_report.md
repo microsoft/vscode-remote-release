@@ -1,5 +1,5 @@
 ---
-name: Bug report for Dev Containers/WSL/Remote Server
+name: Bug report for Dev Containers/WSL/Remote - Tunnels/VS Code Server
 about: Create a report to help us improve. 
 ---
 
@@ -10,7 +10,7 @@ about: Create a report to help us improve.
 - VSCode Version:
 - Local OS Version:
 - Remote OS Version:
-- Remote Extension/Connection Type: Containers/WSL/Server <!-- WARNING: Are you reporting a Remote - SSH issue? To prevent delays, please STOP and use the 'Remote - SSH Bug' issue template instead -->
+- Remote Extension/Connection Type: Dev Containers/WSL/Remote - Tunnels/VS Code Server <!-- WARNING: Are you reporting a Remote - SSH issue? To prevent delays, please STOP and use the 'Remote - SSH Bug' issue template instead -->
 - Logs:
 
 Steps to Reproduce:
