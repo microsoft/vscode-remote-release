@@ -62,9 +62,11 @@ body:
         <details>
         <summary>Remote-SSH Log</summary>
         <p>
+
         ```
         [PASTE LOG HERE WITHIN THE BACKTICKS TO FORMAT]
         ```
+      
         </p>
         </details>
     validations:
