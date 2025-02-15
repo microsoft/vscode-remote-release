@@ -20,12 +20,13 @@ This repository is for providing feedback on the **[Visual Studio Remote Develop
 
 - **[Remote - SSH](https://aka.ms/vscode-remote/download/ssh)**
     - Remote - SSH: Editing Configuration Files
-- **[Remote - Containers](https://aka.ms/vscode-remote/download/containers)**
-- **[Remote - WSL](https://aka.ms/vscode-remote/download/wsl)**
+- **[Dev Containers](https://aka.ms/vscode-remote/download/containers)**
+- **[WSL](https://aka.ms/vscode-remote/download/wsl)**
+- **[Remote - Tunnels](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-server)** and the **[Visual Studio Code Server](https://aka.ms/vscode-server-doc)**.
 
 If you are running into an issue with **another extension** you'd like to use with the Remote Development extensions, please raise an issue in the extension's repository. You can reference our [summary](https://aka.ms/vscode-remote/troubleshooting/extensions) of tips for remote related issues and our [extension guide](https://aka.ms/vscode-remote/developing-extensions) to help the extension author get started. 
 
-Issues related to dev container definitions can be reported in the [vscode-dev-containers repository](https://aka.ms/vscode-dev-containers). You may use the [dev container spec repository](https://github.com/microsoft/dev-container-spec) to file and review issues to shape the direction of development containers and the dev container CLI.
+Issues related to [the Dev Container ecosystem](https://containers.dev/) may be reported in several places. Issues involving [Features](https://github.com/devcontainers/features), [Templates](https://github.com/devcontainers/templates), or [Images](https://github.com/devcontainers/images) can be reported in the relevant repo.  Issues relating to the open source dev container CLI can be reported on [devcontainers/cli](https://github.com/devcontainers/cli). You may use the [dev container spec repository](https://github.com/devcontainers/spec) to file and review issues to shape the direction of development containers and the dev container CLI.
 
 ## Documentation
 

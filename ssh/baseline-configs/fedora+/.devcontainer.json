@@ -1,0 +1,5 @@
+{
+	"dockerFile": "Dockerfile",
+	"appPort": 5670,
+	"overrideCommand": false
+}
