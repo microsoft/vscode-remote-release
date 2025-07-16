@@ -138,7 +138,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 ---------------------------------------------------------
 
-shimmer 1.2.1 - BSD-2-Clause
+shimmer 1.2.1 - BSD-2-Clause 
 https://github.com/othiym23/shimmer#readme
 
 Copyright (c) 2013-2019, Forrest L Norvell
