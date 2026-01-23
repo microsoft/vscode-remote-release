@@ -62,7 +62,7 @@ To prevent this issue from recurring:
 
 2. **Use `forwardPorts` OR Docker ports**: Choose one method for exposing ports rather than both
 
-3. **Consider using `appPort`**: In `devcontainer.json`, `appPort` is specifically designed for ports that should always be forwarded, while `forwardPorts` is for ports that VS Code should auto-forward when detected
+3. **Clean up after configuration changes**: If you change your port forwarding configuration, consider clearing the cached tunnel entries (using the workaround above) before reconnecting
 
 ## Related Issues
 
