@@ -1,0 +1,181 @@
+name: Python Build Optimize & Cleanup
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONUNBUFFERED: "1"
+  PYTHONDONTWRITEBYTECODE: "1"
+  PIP_DISABLE_PIP_VERSION_CHECK: "1"
+
+jobs:
+  build-optimize:
+    name: Build and optimize Python
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Upgrade build tooling
+        run: |
+          python -m pip install --upgrade pip setuptools wheel
+
+      - name: Install dependencies
+        shell: bash
+        run: |
+          if [ -f requirements.txt ]; then
+            python -m pip install -r requirements.txt
+          fi
+
+          if [ -f requirements-dev.txt ]; then
+            python -m pip install -r requirements-dev.txt
+          fi
+
+          if [ -f pyproject.toml ]; then
+            python -m pip install -e .
+          fi
+
+      - name: Validate Python syntax
+        run: |
+          python -m compileall -q .
+
+      - name: Run tests
+        shell: bash
+        run: |
+          if [ -d tests ] || [ -f pytest.ini ] || [ -f pyproject.toml ]; then
+            if python -c "import pytest" 2>/dev/null; then
+              python -m pytest -q
+            else
+              echo "pytest not installed; skipping test runner"
+            fi
+          else
+            echo "No Python test suite detected"
+          fi
+
+      - name: Build Python package
+        shell: bash
+        run: |
+          rm -rf build dist *.egg-info
+
+          if [ -f pyproject.toml ] || [ -f setup.py ]; then
+            python -m build
+          else
+            echo "No Python package metadata found; source build completed"
+          fi
+
+      - name: Remove disposable Python artifacts
+        shell: bash
+        run: |
+          find . \
+            -type d \
+            \( \
+              -name "__pycache__" \
+              -o -name ".pytest_cache" \
+              -o -name ".mypy_cache" \
+              -o -name ".ruff_cache" \
+              -o -name ".tox" \
+              -o -name ".nox" \
+            \) \
+            -prune -exec rm -rf {} +
+
+          find . \
+            -type f \
+            \( -name "*.pyc" -o -name "*.pyo" \) \
+            -delete
+
+      - name: Show build size
+        shell: bash
+        run: |
+          echo "Repository:"
+          du -sh . || true
+
+          if [ -d dist ]; then
+            echo "Python distribution:"
+            du -sh dist
+            ls -lah dist
+          fi
+
+      - name: Upload Python build
+        if: success() && hashFiles('dist/**') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: elparadisogonzalo-python-build
+          path: dist/
+          retention-days: 7
+
+  cloud-cleanup:
+    name: Safe Cloudflare/D1 cleanup
+    runs-on: ubuntu-latest
+    needs: build-optimize
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install Wrangler
+        run: npm install --global wrangler
+
+      - name: Verify Wrangler
+        run: wrangler --version
+
+      # IMPORTANT:
+      # This step only runs SQL supplied through the repository.
+      # Do not put a blanket DELETE against authentication/session tables here.
+      - name: Run safe D1 maintenance
+        if: ${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -f scripts/d1-cleanup.sql ]; then
+            wrangler d1 execute elparadisogonzalo-db \
+              --remote \
+              --file=scripts/d1-cleanup.sql
+          else
+            echo "No scripts/d1-cleanup.sql found."
+            echo "Skipping database cleanup."
+          fi
+
+      - name: Cleanup local workflow caches
+        run: |
+          rm -rf .pytest_cache
+          rm -rf .mypy_cache
+          rm -rf .ruff_cache
+          rm -rf node_modules/.cache
+
+          find . \
+            -type d \
+            \( -name "__pycache__" -o -name ".cache" \) \
+            -prune -exec rm -rf {} + || true
+
+      - name: Cleanup old workflow artifacts
+        shell: bash
+        run: |
+          echo "GitHub automatically expires the uploaded build after 7 days."
+          echo "No production data or authentication credentials are deleted here."
