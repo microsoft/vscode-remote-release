@@ -9,8 +9,7 @@
       "applyLabel": true
     },
     "ssh": {
-      "applyLabel": true,
-      "assign": ["joshspicer"]
+      "applyLabel": true
     },
     "code-server": {"assign": ["connor4312"]},
     "tunnels": {"assign": ["connor4312"]}
