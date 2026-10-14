@@ -1,0 +1,33 @@
+My Code contribution for the hackors
+
+when (
+    Sql Server: select case table1.col1 when 1 then 'Y' else 'N' end as col1_yn from .... Also: msdn.microsoft.com/en-us/library/dd233249.aspx Basically I would do a search for "when" using Google code search. – 
+Job
+ CommentedOct 16, 2011 at 4:01 
+5
+@Job: That's a clause, not a statement. – 
+Ben Voigt
+ CommentedOct 16, 2011 at 4:02
+2
+You mean like in Verilog? – 
+dan04
+ CommentedOct 16, 2011 at 17:50
+2
+Needs more description... very broad question. – 
+WernerCD
+ CommentedOct 16, 2011 at 23:22
+2
+The question is being discussed here on meta. – 
+Adam Lear
+♦
+ CommentedOct 17, 2011 at 12:26
+)
+
+
+int ports == ports 2
+{po[onOpen]rt}
+
+generate server.exe
+
+
+Comment: "kann nicht öffnen, zu wenig leistung in PC. Sorry!"
