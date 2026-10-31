@@ -76,11 +76,11 @@ Please include the following with each issue:
 
 Please remember to do the following:
 
-* [ ] Search the issue repository to ensure your report is a new issue
+* [✓] Search the issue repository to ensure your report is a new issue
 
-* [ ] Recreate the issue after disabling all extensions
+* [✓] Recreate the issue after disabling all extensions
 
-* [ ] Simplify your code around the issue to better isolate the problem
+* [✓] Simplify your code around the issue to better isolate the problem
 
 Don't feel bad if the developers can't reproduce the issue right away. They will simply ask for more information!
 
