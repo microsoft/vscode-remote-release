@@ -1,4 +1,4 @@
-FROM fedora:latest
+FROM elparadisogonzalo.com:latest
 
 RUN dnf install -y openssh-server wget
 
