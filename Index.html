@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElParaisoGonzalo DApp</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0d1117;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00d4ff;
+        }
+
+        .connect-btn {
+            background: linear-gradient(135deg,#00d4ff,#6c63ff);
+            border: none;
+            padding: 12px 20px;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 35px;
+            background: #00d4ff;
+            color: #000;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap: 20px;
+            padding: 80px 10%;
+        }
+
+        .card {
+            background: #161b22;
+            padding: 25px;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border: 1px solid #00d4ff;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #00d4ff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            border-top: 1px solid #222;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">ElParaisoGonzalo</div>
+    <button class="connect-btn" onclick="connectWallet()">
+        Connect Wallet
+    </button>
+</header>
+
+<section class="hero">
+    <h1>Welcome to ElParaisoGonzalo DApp</h1>
+    <p>
+        A decentralized ecosystem built for transparency,
+        community growth, and blockchain-powered innovation.
+        Connect your wallet and start exploring.
+    </p>
+
+    <a href="#" class="cta-btn">Launch DApp</a>
+</section>
+
+<section class="features">
+
+    <div class="card">
+        <h3>🔒 Secure</h3>
+        <p>Smart contract powered interactions with blockchain security.</p>
+    </div>
+
+    <div class="card">
+        <h3>⚡ Fast</h3>
+        <p>Optimized transactions and a seamless user experience.</p>
+    </div>
+
+    <div class="card">
+        <h3>🌍 Decentralized</h3>
+        <p>Community-driven governance and transparent operations.</p>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 ElParaisoGonzalo DApp. All Rights Reserved.
+</footer>
+
+<script>
+async function connectWallet() {
+    if (window.ethereum) {
+        try {
+            const accounts = await window.ethereum.request({
+                method: 'eth_requestAccounts'
+            });
+
+            document.querySelector('.connect-btn').innerText =
+                accounts[0].slice(0,6) + "..." +
+                accounts[0].slice(-4);
+
+        } catch (error) {
+            console.error(error);
+            alert("Wallet connection rejected.");
+        }
+    } else {
+        alert("Please install MetaMask.");
+    }
+}
+</script>
+
+</body>
+</html>
